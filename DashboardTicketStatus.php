@@ -14,9 +14,9 @@ class DashboardTicketStatus {
         $tickets_answered = $tickets_answered[0]['COUNT(*)'];
         $html = '';
         $html .= '<table style="width:100%;margin-top: 20px;text-align:center"><tr>';
-        $html .= '<td style="width:33%;font-size:2em"><span class="label label-'.($tickets_awaiting_reply==0?'default':'danger').'">'.$tickets_awaiting_reply.'</span></td>';
-        $html .= '<td style="font-size:2em"><span class="label label-'.($tickets_in_progress==0?'default':'primary').'">'.$tickets_in_progress.'</span></td>';
-        $html .= '<td style="width:33%;font-size:2em"><span class="label label-'.($tickets_answered==0?'default':'success').'">'.$tickets_answered.'</span></td>';
+        $html .= '<td style="width:33%;font-size:2em"><span class="badge bg-'.($tickets_awaiting_reply==0?'secondary':'danger').'">'.$tickets_awaiting_reply.'</span></td>';
+        $html .= '<td style="font-size:2em"><span class="badge bg-'.($tickets_in_progress==0?'secondary':'primary').'">'.$tickets_in_progress.'</span></td>';
+        $html .= '<td style="width:33%;font-size:2em"><span class="badge bg-'.($tickets_answered==0?'secondary':'success').'">'.$tickets_answered.'</span></td>';
         $html .= '</tr><tr><td style="padding-top: 10px">Awaiting Reply</td><td style="padding-top: 10px">In Progress</td><td style="padding-top: 10px">Answered</td></tr></table>';
         return array(
             'header' => 'Ticket Status',
